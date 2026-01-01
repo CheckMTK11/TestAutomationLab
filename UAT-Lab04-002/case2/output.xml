@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-01T18:27:20.476362" rpa="false" schemaversion="5">
+<suite id="s1" name="Uat002-2" source="E:\SoftwareEn\lab4\testautomationlab\uat-lab04-002\case2\uat002-2.robot">
+<test id="s1-t1" name="Open Workshop Registration Page" line="30">
+<kw name="Open Workshop Registration">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:21.168960" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Registration.html'.</msg>
+<arg>${REGISTRATION URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-01T18:27:21.168451" elapsed="2.753072"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:27:21.167452" elapsed="2.755069"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:24.153097" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/open_workshop_registration_page.png"&gt;&lt;img src="Screenshot/open_workshop_registration_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/open_workshop_registration_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:27:23.922521" elapsed="0.230576"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:27:21.164924" elapsed="2.989260"/>
+</test>
+<test id="s1-t2" name="Empty Last Name" line="35">
+<kw name="Fill Registration">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:24.160180" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<arg>${INPUT_FIRSTNAME}</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:27:24.159180" elapsed="0.214045"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:24.373777" level="INFO">Typing text '' into text field 'id=lastname'.</msg>
+<arg>${INPUT_LASTNAME}</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:27:24.373225" elapsed="0.147046"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:24.522284" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
+<arg>${INPUT_ORGANIZATION}</arg>
+<arg>${organization}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:27:24.521283" elapsed="0.167224"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:24.689524" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:27:24.688507" elapsed="0.216483"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:24.905984" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
+<arg>${INPUT_PHONE}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:27:24.904990" elapsed="0.170072"/>
+</kw>
+<arg>Somyod</arg>
+<arg>${Empty}</arg>
+<arg>CS KKU</arg>
+<arg>somyod@kkumail.com</arg>
+<arg>091-001-1234</arg>
+<status status="PASS" start="2026-01-01T18:27:24.156181" elapsed="0.918881"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:25.178482" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/fill_registration.png"&gt;&lt;img src="Screenshot/fill_registration.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/fill_registration.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:27:25.076064" elapsed="0.102418"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:25.179483" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>${REG_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:27:25.179483" elapsed="0.156265"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>Registration.html</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-01-01T18:27:25.335748" elapsed="0.011283"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please enter your last name!!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-01T18:27:25.348033" elapsed="0.024500"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:27:25.491545" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/register_result.png"&gt;&lt;img src="Screenshot/register_result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/register_result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:27:25.372533" elapsed="0.120013"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-01T18:27:25.492546" elapsed="2.333680"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:27:24.155180" elapsed="3.672047"/>
+</test>
+<status status="PASS" start="2026-01-01T18:27:20.480071" elapsed="7.349156"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Uat002-2" id="s1" pass="2" fail="0" skip="0">Uat002-2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

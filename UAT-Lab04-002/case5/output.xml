@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-01T18:40:00.963971" rpa="false" schemaversion="5">
+<suite id="s1" name="Uat002-5" source="E:\SoftwareEn\lab4\testautomationlab\uat-lab04-002\case5\uat002-5.robot">
+<test id="s1-t1" name="Open Workshop Registration Page" line="30">
+<kw name="Open Workshop Registration">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:01.652185" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Registration.html'.</msg>
+<arg>${REGISTRATION URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-01T18:40:01.651635" elapsed="2.765708"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:40:01.649360" elapsed="2.768984"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:04.642685" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/open_workshop_registration_page.png"&gt;&lt;img src="Screenshot/open_workshop_registration_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/open_workshop_registration_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:40:04.420347" elapsed="0.222338"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:40:01.646558" elapsed="2.997125"/>
+</test>
+<test id="s1-t2" name="Invalid Phone Number" line="35">
+<kw name="Fill Registration">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:04.646689" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<arg>${INPUT_FIRSTNAME}</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:40:04.645690" elapsed="0.214891"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:04.862131" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
+<arg>${INPUT_LASTNAME}</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:40:04.860581" elapsed="0.170796"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:05.032382" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
+<arg>${INPUT_ORGANIZATION}</arg>
+<arg>${organization}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.031377" elapsed="0.161150"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:05.192527" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.192527" elapsed="0.187335"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:05.381863" level="INFO">Typing text '1234' into text field 'id=phone'.</msg>
+<arg>${INPUT_PHONE}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.380862" elapsed="0.148944"/>
+</kw>
+<arg>Somyod</arg>
+<arg>Sodsai</arg>
+<arg>CS KKU</arg>
+<arg>somyod@kkumail.com</arg>
+<arg>1234</arg>
+<status status="PASS" start="2026-01-01T18:40:04.645690" elapsed="0.884116"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:05.661355" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/fill_registration.png"&gt;&lt;img src="Screenshot/fill_registration.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/fill_registration.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.530801" elapsed="0.131567"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:05.663407" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>${REG_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.662368" elapsed="0.156496"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:05.938383" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/register_result.png"&gt;&lt;img src="Screenshot/register_result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/register_result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.819875" elapsed="0.118508"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>Registration.html</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-01-01T18:40:05.938383" elapsed="0.010657"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:40:11.086263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-01T18:40:11.087787" level="FAIL">Text 'Please enter a valid phone number, e.g., 081-234-5678, 081 234 5678, or 081.234.5678)' did not appear in 5 seconds.</msg>
+<arg>Please enter a valid phone number, e.g., 081-234-5678, 081 234 5678, or 081.234.5678)</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2026-01-01T18:40:05.949040" elapsed="5.141800">Text 'Please enter a valid phone number, e.g., 081-234-5678, 081 234 5678, or 081.234.5678)' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-01-01T18:40:11.091841" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-01T18:40:04.644684" elapsed="6.447157">Text 'Please enter a valid phone number, e.g., 081-234-5678, 081 234 5678, or 081.234.5678)' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" start="2026-01-01T18:40:00.969127" elapsed="10.124764"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Uat002-5" id="s1" pass="1" fail="1" skip="0">Uat002-5</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
