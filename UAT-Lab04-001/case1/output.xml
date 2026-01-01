@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-01T18:05:04.907342" rpa="false" schemaversion="5">
+<suite id="s1" name="Uat-Lab04-001-1" source="E:\SoftwareEn\lab4\testautomationlab\UAT-lab04-001-1\uat-lab04-001-1.robot">
+<test id="s1-t1" name="Open Workshop Registration Page" line="30">
+<kw name="Open Workshop Registration">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:05.536154" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Registration.html'.</msg>
+<arg>${REGISTRATION URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-01T18:05:05.535153" elapsed="2.959239"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:05:05.534116" elapsed="2.960276"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:08.747629" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/open_workshop_registration_page.png"&gt;&lt;img src="Screenshot/open_workshop_registration_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/open_workshop_registration_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:05:08.501615" elapsed="0.247030"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:05:05.532733" elapsed="3.215912"/>
+</test>
+<test id="s1-t2" name="Register Success" line="35">
+<kw name="Fill Registration">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:08.752643" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<arg>${INPUT_FIRSTNAME}</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:05:08.751638" elapsed="0.265574"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:09.018315" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
+<arg>${INPUT_LASTNAME}</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:05:09.017764" elapsed="0.166064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:09.184843" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
+<arg>${INPUT_ORGANIZATION}</arg>
+<arg>${organization}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:05:09.184843" elapsed="0.187383"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:09.374227" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:05:09.373228" elapsed="0.244906"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:09.619263" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
+<arg>${INPUT_PHONE}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:05:09.618134" elapsed="0.223891"/>
+</kw>
+<arg>Somyod</arg>
+<arg>Sodsai</arg>
+<arg>CS KKU</arg>
+<arg>somyod@kkumail.com</arg>
+<arg>091-001-1234</arg>
+<status status="PASS" start="2026-01-01T18:05:08.750643" elapsed="1.092381"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:09.942371" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/fill_registration.png"&gt;&lt;img src="Screenshot/fill_registration.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/fill_registration.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:05:09.844023" elapsed="0.098348"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:09.943373" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>${REG_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T18:05:09.942371" elapsed="0.255223"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>Success.html</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-01-01T18:05:10.198593" elapsed="0.009178"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Thank you for registering with us.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-01T18:05:10.207771" elapsed="0.024096"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>We will send a confirmation to your email soon.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-01T18:05:10.232876" elapsed="0.020790"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-01T18:05:10.360477" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/register_result.png"&gt;&lt;img src="Screenshot/register_result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Screenshot/register_result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-01T18:05:10.254679" elapsed="0.105798"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-01T18:05:10.360477" elapsed="2.298199"/>
+</kw>
+<status status="PASS" start="2026-01-01T18:05:08.749645" elapsed="3.910036"/>
+</test>
+<status status="PASS" start="2026-01-01T18:05:04.910866" elapsed="7.750337"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Uat-Lab04-001-1" id="s1" pass="2" fail="0" skip="0">Uat-Lab04-001-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
